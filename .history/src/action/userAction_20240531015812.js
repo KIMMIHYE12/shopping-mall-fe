@@ -13,7 +13,7 @@ const registerUser =
   async (dispatch) => {
     try {
       dispatch({ type: types.REGISTER_USER_REQUEST });
-      const response = await api.post("/user", { email, name, password });
+      const response = await api.post("/user");
       if (response.status !== 200) throw new Error(response.error);
       dispatch({ type: types.REGISTER_USER_SUCCESS });
     } catch (error) {

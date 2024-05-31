@@ -31,7 +31,7 @@ const RegisterPage = () => {
     }
     setPasswordError("");
     setPolicyError(false);
-    dispatch(userActions.registerUser({ name, email, password }));
+    dispatch(userActions.registerUser({ user, email, password }));
   };
 
   const handleChange = (event) => {

@@ -11,7 +11,7 @@ import { commonUiActions } from "../action/commonUiAction";
 const AppLayout = ({ children }) => {
   const location = useLocation();
   const dispatch = useDispatch();
-  const user = null; // 로그인 기능 만들고 지우기
+  const user = { level: "admin" }; // 로그인 기능 만들고 지우기
 
   // const { user } = useSelector((state) => state.user);
   useEffect(() => {
@@ -22,8 +22,8 @@ const AppLayout = ({ children }) => {
     <div>
       <ToastMessage />
       {location.pathname.includes("admin") ? (
-        <Row className='vh-100'>
-          <Col xs={12} md={3} className='sidebar mobile-sidebar'>
+        <Row className="vh-100">
+          <Col xs={12} md={3} className="sidebar mobile-sidebar">
             <Sidebar />
           </Col>
           <Col xs={12} md={9}>
